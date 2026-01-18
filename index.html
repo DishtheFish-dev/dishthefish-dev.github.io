@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <title>OCAIO</title>
+  <title>My Install Guide</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap 5 CSS -->
@@ -49,60 +49,66 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-  <div class="container-fluid">
-    <img src="logo.png" alt="Logo" width="120" class="mb-3">
-    <a class="navbar-brand fw-bold" href="#">dishthefish-devs's OCAIO</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="nav">
-      <div class="ms-auto">
-        <button id="themeToggle" class="btn btn-outline-secondary btn-sm">
-          Toggle theme
-        </button>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container-fluid">
+      <img src="logo.png" alt="Logo" width="120" class="mb-3">
+      <a class="navbar-brand fw-bold" href="#">dishthefish-devs's OCAIO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <div class="ms-auto">
+          <button id="themeToggle" class="btn btn-outline-secondary btn-sm">
+            Toggle theme
+          </button>
+        </div>
       </div>
     </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero bg-white border-bottom">
+    <img src="logo.png" alt="Logo" width="120" class="mb-3">
+    <h1 class="fw-bold">OCAIO</h1>
+    <p class="text-muted">The ultimate get-together of all things OpenCore!</p>
+  </section>
+
+  <!-- Main Layout -->
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <!-- Sidebar (optional, add content if needed) -->
+      <!--
+      <nav class="col-md-3 col-lg-4 sidebar">
+        ...sidebar content...
+      </nav>
+      -->
+      <!-- Content -->
+      <main class="col-12 doc-content px-md-4">
+        <!-- ...main content goes here... -->
+      </main>
+    </div>
   </div>
-</nav>
 
-<!-- Hero -->
-<section class="hero bg-white border-bottom">
-  <img src="logo.png" alt="Logo" width="120" class="mb-3">
-  <h1 class="fw-bold">OCAIO</h1>
-  <p class="text-muted">The ultimate get-together of all things OpenCore!</p>
-</section>
+  <!-- Footer -->
+  <footer class="text-center py-4 border-top mt-5">
+    2026 dishthefish - no rights reserved! 😉 - credits to dortania, corpnewt, chefkiss, and other beneficiaries
+  </footer>
 
-<!-- Main Layout -->
-<div class="container-fluid mt-4">
-  <div class="row">
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Content -->
-    <main class="col-md-9 col-lg-8 doc-content px-md-4">
-    </main>
-  </div>
-</div>
+  <script>
+    const toggle = document.getElementById("themeToggle");
+    const html = document.documentElement;
 
-<!-- Footer -->
-<footer class="text-center py-4 border-top mt-5">
-  2026 dishthefish - no rights reserved! 😉 - credits to dortania, corpnewt, chefkiss, and other beneficiaries
-</footer>
-
-<!-- Bootstrap 5 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  const toggle = document.getElementById("themeToggle");
-  const html = document.documentElement;
-
-  toggle.addEventListener("click", () => {
-    html.setAttribute(
-      "data-bs-theme",
-      html.getAttribute("data-bs-theme") === "dark" ? "light" : "dark"
-    );
-  });
-</script>
+    toggle.addEventListener("click", () => {
+      html.setAttribute(
+        "data-bs-theme",
+        html.getAttribute("data-bs-theme") === "dark" ? "light" : "dark"
+      );
+    });
+  </script>
 
 </body>
 </html>
