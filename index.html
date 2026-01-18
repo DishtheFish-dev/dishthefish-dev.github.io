@@ -13,37 +13,82 @@
 
   <style>
     body {
-      font-size: 0.95rem;
+      font-size: 1rem;
+      background-color: var(--bs-body-bg);
+      color: var(--bs-body-color);
     }
 
     .sidebar {
       position: sticky;
-      top: 1rem;
-      height: calc(100vh - 2rem);
+      top: 1.5rem;
+      height: calc(100vh - 3rem);
       overflow-y: auto;
+      background: var(--bs-secondary-bg);
+      padding: 1.5rem 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
     }
 
     .sidebar a {
-      text-decoration: none;
-      color: #0d6efd;
+      display: block;
+      padding: 0.5rem 0;
+      color: var(--bs-primary);
+      font-weight: 500;
+      border-radius: 0.25rem;
+      transition: background 0.2s;
     }
 
     .sidebar a:hover {
-      text-decoration: underline;
+      background: var(--bs-primary-bg-subtle);
+      color: var(--bs-primary);
+      text-decoration: none;
+    }
+
+    .doc-content {
+      padding-top: 1.5rem;
+      padding-bottom: 2rem;
     }
 
     .doc-content h2 {
-      margin-top: 3rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--bs-heading-color, var(--bs-primary));
     }
 
     .hero {
-      padding: 3rem 1rem;
+      padding: 3rem 1rem 2rem 1rem;
       text-align: center;
+      background: var(--bs-light-bg-subtle, #f8f9fa);
+      border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+      margin-bottom: 0;
+    }
+
+    .hero img {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: var(--bs-primary);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--bs-secondary-color, #6c757d);
     }
 
     footer {
-      font-size: 0.85rem;
-      color: #6c757d;
+      font-size: 0.9rem;
+      color: var(--bs-secondary-color, #6c757d);
+      background: var(--bs-body-bg);
+      border-top: 1px solid var(--bs-border-color, #dee2e6);
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
     }
   </style>
 </head>
