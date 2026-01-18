@@ -2,159 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>My Guide — Inspired by Dortania</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>My Install Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
   <style>
-    /* Simple example CSS — adapt with your own accurate theme */
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #333;
+      font-size: 0.95rem;
     }
-    nav {
-      background: #f8f8f8;
-      border-bottom: 1px solid #ccc;
-      padding: 1rem;
-      display: flex;
-      gap: 1rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #0066cc;
-      font-weight: bold;
-    }
-    .container {
-      display: flex;
-      max-width: 1200px;
-      margin: 2rem auto;
-      gap: 2rem;
-      padding: 0 1rem;
-    }
+
     .sidebar {
-      width: 250px;
-      border-right: 1px solid #ddd;
-      padding-right: 1rem;
+      position: sticky;
+      top: 1rem;
+      height: calc(100vh - 2rem);
+      overflow-y: auto;
     }
-    .sidebar h2 {
-      font-size: 1.2rem;
-      margin-top: 0;
-    }
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-    .sidebar li {
-      margin: 0.5rem 0;
-    }
+
     .sidebar a {
       text-decoration: none;
-      color: #0066cc;
+      color: #0d6efd;
     }
-    .main-content {
-      flex: 1;
+
+    .sidebar a:hover {
+      text-decoration: underline;
     }
+
+    .doc-content h2 {
+      margin-top: 3rem;
+    }
+
     .hero {
+      padding: 3rem 1rem;
       text-align: center;
-      padding: 2rem 0;
     }
-    .hero img {
-      max-width: 150px;
-    }
-    .hero h1 {
-      margin: 1rem 0 0.5rem;
-    }
+
     footer {
-      text-align: center;
-      padding: 1rem;
-      border-top: 1px solid #ccc;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #666;
+      font-size: 0.85rem;
+      color: #6c757d;
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Navigation -->
-  <nav>
-    <a href="/">Home</a>
-    <a href="/getting-started">Getting Started</a>
-    <a href="/post-install">Post Install</a>
-    <a href="/multiboot">Multiboot</a>
-    <a href="/gpu-buyers-guide">GPU Guide</a>
-    <a href="/wireless-guide">Wireless Guide</a>
-  </nav>
-
-  <!-- Hero / Title section -->
-  <section class="hero">
-    <img src="logo.png" alt="Guide Logo">
-    <h1>My Custom Install Guide</h1>
-    <p>Version 1.0.0 — Learn step-by-step</p>
-  </section>
-
-  <!-- Sidebar and main content -->
-  <div class="container">
-
-    <!-- Sidebar TOC -->
-    <aside class="sidebar">
-      <h2>Contents</h2>
-      <ul>
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#requirements">Requirements</a></li>
-        <li><a href="#usb-creation">USB Creation</a></li>
-        <li><a href="#config-setup">Config Setup</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#troubleshooting">Troubleshooting</a></li>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#">My Guide</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#">Getting Started</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Install</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Post-Install</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Troubleshooting</a></li>
       </ul>
-    </aside>
+    </div>
+  </div>
+</nav>
 
-    <!-- Main Section -->
-    <article class="main-content">
+<!-- Hero -->
+<section class="hero bg-white border-bottom">
+  <img src="logo.png" alt="Logo" width="120" class="mb-3">
+  <h1 class="fw-bold">My Custom Install Guide</h1>
+  <p class="text-muted">Step-by-step documentation inspired by Dortania</p>
+</section>
+
+<!-- Main Layout -->
+<div class="container-fluid mt-4">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-none d-md-block">
+      <div class="sidebar ps-3">
+        <h6 class="text-uppercase text-muted">Contents</h6>
+        <ul class="list-unstyled">
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#requirements">Requirements</a></li>
+          <li><a href="#usb">USB Creation</a></li>
+          <li><a href="#config">Config Setup</a></li>
+          <li><a href="#install">Installation</a></li>
+          <li><a href="#troubleshoot">Troubleshooting</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="col-md-9 col-lg-8 doc-content px-md-4">
+
       <section id="intro">
         <h2>Introduction</h2>
-        <p>OpenCore is a boot loader that lets you prepare your system to boot macOS on custom hardware.</p>
+        <p>
+          This guide walks you through installing macOS using OpenCore on supported hardware.
+        </p>
       </section>
 
       <section id="requirements">
         <h2>Requirements</h2>
-        <p>Before starting you’ll need:</p>
         <ul>
-          <li>Supported hardware</li>
+          <li>Compatible hardware</li>
+          <li>USB flash drive (16GB+)</li>
           <li>macOS installer</li>
-          <li>USB drive</li>
         </ul>
       </section>
 
-      <section id="usb-creation">
+      <section id="usb">
         <h2>USB Creation</h2>
-        <p>Instructions to format and prepare your macOS USB installer.</p>
+        <p>
+          Format your USB and create the macOS installer using official tools.
+        </p>
       </section>
 
-      <section id="config-setup">
+      <section id="config">
         <h2>Config Setup</h2>
-        <p>Setup your <code>config.plist</code> and necessary drivers/kexts.</p>
+        <p>
+          Configure <code>config.plist</code>, drivers, and kexts for your system.
+        </p>
       </section>
 
-      <section id="installation">
+      <section id="install">
         <h2>Installation</h2>
-        <p>Boot from USB and follow installation steps.</p>
+        <p>
+          Boot from the USB and install macOS.
+        </p>
       </section>
 
-      <section id="troubleshooting">
+      <section id="troubleshoot">
         <h2>Troubleshooting</h2>
-        <p>Common issues and fixes.</p>
+        <p>
+          Common errors, fixes, and debugging tips.
+        </p>
       </section>
-    </article>
 
+    </main>
   </div>
+</div>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2026 My Custom Guide — Inspired by Dortania's layout
-  </footer>
+<!-- Footer -->
+<footer class="text-center py-4 border-top mt-5">
+  © 2026 My Guide — Inspired by Dortania
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
